@@ -1,0 +1,21 @@
+<%= form_for(@booklist) do |f| %>
+  <% if @booklist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booklist.errors.count, "error") %> prohibited this booklist from being saved:</h2>
+
+      <ul>
+      <% @booklist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
