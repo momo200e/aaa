@@ -53,7 +53,7 @@ class BooklistsController < ApplicationController
 
   # DELETE /booklists/1
   # DELETE /booklists/1.json
-  def destroy
+  def aa
     @booklist.destroy
     respond_to do |format|
       format.html { redirect_to booklists_url, notice: 'Booklist was successfully destroyed.' }
